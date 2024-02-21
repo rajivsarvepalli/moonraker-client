@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ESNext", // ~node10
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "module": "CommonJS",
     "lib": [
       "es2015",
       "es2016",
