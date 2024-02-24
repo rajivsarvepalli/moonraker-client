@@ -61,7 +61,7 @@ export class MoonrakerClient {
     ).catch(()=> false);
   }
 
-  async getPrintProgress(): Promise<number> {
+  async getPrintProgress(): Promise<number | undefined> {
     return this.httpRequest({
       method: 'post',
       url: '/printer/objects/query',
@@ -76,10 +76,10 @@ export class MoonrakerClient {
 
         return undefined;
       },
-    ).catch(()=> false);
+    ).catch(()=> undefined);
   }
 
-  async getTemperatureForSensor(sensorName: string): Promise<number> {
+  async getTemperatureForSensor(sensorName: string): Promise<number | undefined> {
     const sensor = 'temperature_sensor ' + sensorName;
     return this.httpRequest({
       method: 'post',
@@ -95,7 +95,7 @@ export class MoonrakerClient {
 
         return undefined;
       },
-    ).catch(()=> false);
+    ).catch(()=> undefined);
   }
 
   async setBedTemperature(temperature: number): Promise<boolean> {
