@@ -174,8 +174,6 @@ export class MoonrakerClient {
     ).catch(()=> false);
   }
 
-
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async getOctoprintPrinterData(headers?: any): Promise<PrinterData | undefined> {
     return this.httpRequest({
@@ -192,6 +190,7 @@ export class MoonrakerClient {
       });
   }
 
+  
   async httpRequest<D>(config: AxiosRequestConfig<D>) {
     return this.httpClient.httpRequest(config);
   }
