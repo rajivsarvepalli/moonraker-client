@@ -190,7 +190,6 @@ export class MoonrakerClient {
       });
   }
 
-  
   async httpRequest<D>(config: AxiosRequestConfig<D>) {
     return this.httpClient.httpRequest(config);
   }
